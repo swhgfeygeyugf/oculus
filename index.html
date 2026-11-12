@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REALITY SHIFT VR — Погрузись в реальность без границ</title>
+  <meta name="description" content="Флагманские VR-очки нового поколения: беспроводное подключение, дисплеи 8K Ultra-HD, 120Hz и процессор с нейромодулем. Доставка по Казахстану и СНГ, рассрочка 0-0-24 в Kaspi и Halyk.">
+  <meta name="theme-color" content="#060709">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="REALITY SHIFT VR — Погрузись в реальность без границ">
+  <meta property="og:description" content="Премиальный VR-шлем нового поколения. Покупайте на Kaspi, Wildberries, Ozon и Halyk Market.">
+  <meta property="og:image" content="assets/images/hero-model.jpg">
+
+  <!-- Google Fonts: Syne (Massive Display), Outfit (Clean Modern Body), Space Grotesk (Tech Monospace) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Interactive Canvas & Background Orbs -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="glow-orb glow-orb-cyan"></div>
+  <div class="glow-orb glow-orb-purple"></div>
+
+  <!-- ======================================================================
+       HEADER / NAVBAR
+       ====================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="REALITY SHIFT Home">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+            <path d="m3.3 7 8.7 5 8.7-5"></path>
+            <path d="M12 22V12"></path>
+          </svg>
+        </div>
+        <span>REALITY<span style="color: var(--accent-cyan);">SHIFT</span></span>
+        <span class="brand-badge">GEN-3</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Основное меню">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Главная</a></li>
+          <li><a href="#devices" class="nav-link">Устройства</a></li>
+          <li><a href="#billboard" class="nav-link">Опыт</a></li>
+          <li><a href="#marketplaces" class="nav-link">Маркетплейсы</a></li>
+          <li><a href="#gallery" class="nav-link">Галерея</a></li>
+          <li><a href="#catalog" class="nav-link">Каталог</a></li>
+          <li><a href="#features" class="nav-link">Технологии</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Currency, Sound, CTA, Mobile Menu) -->
+      <div class="nav-actions">
+        <!-- Currency Picker -->
+        <div class="currency-picker" title="Выберите валюту">
+          <button class="currency-btn active" data-currency="KZT">₸</button>
+          <button class="currency-btn" data-currency="RUB">₽</button>
+          <button class="currency-btn" data-currency="USD">$</button>
+        </div>
+
+        <!-- Audio Effect Toggle -->
+        <button class="btn-sound" id="sound-toggle-btn" title="Звуковые эффекты интерфейса" aria-label="Включить звук">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+
+        <!-- CTA Button -->
+        <button class="nav-cta-btn" data-open-order="pro">Купить сейчас</button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" aria-label="Открыть мобильное меню">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-nav-menu" id="mobile-menu">
+    <a href="#hero">Главная</a>
+    <a href="#devices">Устройства</a>
+    <a href="#billboard">Опыт погружения</a>
+    <a href="#marketplaces">Маркетплейсы</a>
+    <a href="#gallery">Фотогалерея</a>
+    <a href="#catalog">Каталог & Цены</a>
+    <a href="#features">Преимущества</a>
+    <button class="btn-primary" style="margin-top: 10px; width: 100%;" data-open-order="pro">Купить сейчас</button>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         1. ПЕРВЫЙ ЭКРАН — HERO
+         ====================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Giant background typographic watermark (as in the reference image) -->
+      <div class="hero-giant-bg-text">REALITY SHIFT</div>
+
+      <div class="container hero-grid">
+        <!-- Hero Text & CTA -->
+        <div class="hero-text-content">
+          <div class="hero-badges-wrapper">
+            <span class="hero-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              Новое поколение VR
+            </span>
+            <span class="hero-pill neon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="m10 15 5-3-5-3v6Z"></path></svg>
+              Иммерсивный опыт
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            Погрузись в реальность <span class="text-gradient">без границ</span>
+          </h1>
+
+          <p class="hero-description">
+            Открой новый мир развлечений, игр и впечатлений с VR-очками нового поколения. Сверхчеткая оптика Pancake, пространственный звук и свобода беспроводных движений.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn-primary" data-open-order="pro">
+              <span>Купить сейчас</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+            <a href="#billboard" class="btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+              <span>Смотреть трейлер</span>
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <div class="stat-value">4K<span>+</span></div>
+              <div class="stat-label">Ultra-HD на глаз</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">120<span>Hz</span></div>
+              <div class="stat-label">Плавность частоты</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">480<span>г</span></div>
+              <div class="stat-label">Ультралегкий вес</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Frame with Reference Model & Floating Glass Cards -->
+        <div class="hero-visual-wrapper">
+          <div class="hero-image-frame">
+            <img src="assets/images/hero-model.jpg" alt="Модель в VR очках нового поколения REALITY SHIFT" class="hero-main-img" width="520" height="540">
+          </div>
+
+          <!-- Top-Left Glass Card: Trusted by 50K+ -->
+          <div class="hero-float-card top-left">
+            <div class="float-card-content">
+              <div class="float-avatar-stack">
+                <span>VR</span>
+                <span>XR</span>
+                <span>AI</span>
+              </div>
+              <div>
+                <div class="float-card-title">50,000+ геймеров</div>
+                <div class="float-card-sub">Доверяют флагману</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom-Right Glass Card: Product Preview -->
+          <div class="hero-float-card bottom-right">
+            <div class="float-card-content">
+              <div>
+                <div class="float-card-title">Galaxy Explorer VR</div>
+                <div class="float-card-sub">Флагманский релиз года</div>
+                <div class="float-pill-btn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                  Рейтинг 4.9 / 5.0
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. СПИСОК УСТРОЙСТВ
+         ====================================================================== -->
+    <section class="section" id="devices">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-tag">Комплексная экосистема</div>
+          <h2 class="section-title">Технологии, которые меняют восприятие</h2>
+          <p class="section-subtitle">
+            Каждый элемент создан для бескомпромиссного погружения: от ультралегкого шлема до сверхточных контроллеров и быстрой зарядки.
+          </p>
+        </div>
+
+        <div class="devices-grid">
+          <!-- 1. VR Headset -->
+          <div class="device-card">
+            <span class="device-badge">Core Unit</span>
+            <div class="device-icon-box">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="11" rx="4"></rect>
+                <circle cx="8" cy="12.5" r="2.5"></circle>
+                <circle cx="16" cy="12.5" r="2.5"></circle>
+                <path d="M10.5 12.5h3"></path>
+                <path d="M5 7v-1a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </div>
+            <h3 class="device-name">VR Headset</h3>
+            <div class="device-desc">Шлем виртуальной реальности</div>
+            <ul class="device-specs-list">
+              <li>Pancake-линзы нового поколения</li>
+              <li>Дисплеи 4K+ на каждый глаз</li>
+              <li>Цветной Passthrough с распознаванием рук</li>
+              <li>Автономная работа до 3.5 часов</li>
+            </ul>
+            <button class="device-action-btn" data-open-specs="pro">
+              <span>Спецификация</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+
+          <!-- 2. Motion Controllers -->
+          <div class="device-card">
+            <span class="device-badge">6DoF Precision</span>
+            <div class="device-icon-box">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="device-name">Motion Controllers</h3>
+            <div class="device-desc">Контроллеры движения</div>
+            <ul class="device-specs-list">
+              <li>Тактильная виброотдача TrueTouch 2.0</li>
+              <li>Субмиллиметровое позиционирование</li>
+              <li>Емкостные датчики пальцев</li>
+              <li>Анатомический хват против усталости</li>
+            </ul>
+            <button class="device-action-btn" data-open-specs="complete">
+              <span>Спецификация</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+
+          <!-- 3. Charging Dock -->
+          <div class="device-card">
+            <span class="device-badge">Fast Magnetic</span>
+            <div class="device-icon-box">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <h3 class="device-name">Charging Dock</h3>
+            <div class="device-desc">Зарядная станция</div>
+            <ul class="device-specs-list">
+              <li>Одновременная зарядка шлема и геймпадов</li>
+              <li>Быстрое магнитное примагничивание Snap-In</li>
+              <li>LED-индикаторы статуса батареи</li>
+              <li>Защита от перегрева и скачков напряжения</li>
+            </ul>
+            <button class="device-action-btn" data-open-specs="complete">
+              <span>Спецификация</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+
+          <!-- 4. Travel Case -->
+          <div class="device-card">
+            <span class="device-badge">Armor Pro</span>
+            <div class="device-icon-box">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="3"></rect>
+                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+                <line x1="12" y1="12" x2="12" y2="12.01"></line>
+              </svg>
+            </div>
+            <h3 class="device-name">Travel Case</h3>
+            <div class="device-desc">Защитный кейс</div>
+            <ul class="device-specs-list">
+              <li>Ударопрочный композитный каркас EVA</li>
+              <li>Водоотталкивающее покрытие Ballistic Nylon</li>
+              <li>Внутренние формованные ячейки с микрофиброй</li>
+              <li>Удобный регулируемый плечевой ремень</li>
+            </ul>
+            <button class="device-action-btn" data-open-specs="complete">
+              <span>Спецификация</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. БОЛЬШОЙ РЕКЛАМНЫЙ СЛОГАН
+         ====================================================================== -->
+    <section class="billboard-section" id="billboard">
+      <div class="billboard-bg-glow"></div>
+
+      <div class="container billboard-content">
+        <div class="billboard-source-badge">
+          <span>Статья об опыте VR нового поколения:</span>
+          <a href="https://yourstory.com/2023/06/augmented-reality-virtual-reality-transforming-digital-experience?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">yourstory.com</a>
+        </div>
+
+        <h2 class="billboard-quote">
+          НЕ СМОТРИ НА МИР.<br>
+          <span>СТАНЬ ЕГО ЧАСТЬЮ.</span>
+        </h2>
+
+        <p class="billboard-text">
+          Забудь о границах привычного пространства. Играй, путешествуй, исследуй и создавай собственную реальность.
+        </p>
+
+        <!-- Interactive Experience Switcher -->
+        <div class="experience-tabs-wrapper">
+          <div class="experience-tabs">
+            <button class="exp-tab-btn active" data-mode="gaming">🎮 Гейминг</button>
+            <button class="exp-tab-btn" data-mode="cinema">🎬 IMAX Кино</button>
+            <button class="exp-tab-btn" data-mode="travel">🚀 Путешествия</button>
+            <button class="exp-tab-btn" data-mode="work">💼 Работа & Творчество</button>
+          </div>
+
+          <div class="experience-display-box">
+            <div class="exp-display-visual">
+              <img id="exp-img" src="assets/images/experience-model.jpg" alt="Виртуальный мир REALITY SHIFT VR">
+            </div>
+            <div class="exp-display-text">
+              <h4 id="exp-title">AAA-Гейминг Без Границ</h4>
+              <p id="exp-desc">
+                Полное погружение в виртуальные миры с частотой 120 кадров в секунду, тактильной отдачей и объемным 3D-звучанием. От киберспорта до эпических RPG.
+              </p>
+              <div class="exp-stats-mini">
+                <div class="exp-stat-mini">
+                  <strong id="exp-stat1">120 FPS</strong>
+                  <span id="exp-label1">Частота обновления</span>
+                </div>
+                <div class="exp-stat-mini">
+                  <strong id="exp-stat2">&lt;12 мс</strong>
+                  <span id="exp-label2">Задержка отклика</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. БЛОК МАРКЕТПЛЕЙСОВ
+         ====================================================================== -->
+    <section class="section" id="marketplaces">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-tag">Официальные точки продаж</div>
+          <h2 class="section-title">Покупай там, где удобно</h2>
+          <p class="section-subtitle">
+            Заказывайте оригинальные шлемы с быстрой доставкой по Казахстану и СНГ, выгодной рассрочкой и накоплением бонусов.
+          </p>
+        </div>
+
+        <div class="marketplaces-grid">
+          <!-- 1. Kaspi -->
+          <div class="marketplace-card kaspi">
+            <div class="marketplace-logo-wrap">
+              <svg width="44" height="44" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="48" fill="#F14635"/>
+                <path d="M30 65V35L50 50L70 35V65H60V48L50 55.5L40 48V65H30Z" fill="#FFF"/>
+              </svg>
+            </div>
+            <h3 class="marketplace-name">Kaspi</h3>
+            <div class="marketplace-category">Kaspi Магазин</div>
+            <div class="marketplace-perk">Рассрочка 0-0-12 / 0-0-24 & Red</div>
+            <a href="https://kaspi.kz" target="_blank" rel="noopener noreferrer" class="marketplace-btn">
+              <span>Перейти в Kaspi</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+
+          <!-- 2. Wildberries -->
+          <div class="marketplace-card wb">
+            <div class="marketplace-logo-wrap">
+              <svg width="44" height="44" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="48" fill="url(#wb-grad)"/>
+                <text x="50" y="60" font-family="'Syne', sans-serif" font-weight="900" font-size="28" fill="#FFF" text-anchor="middle">WB</text>
+                <defs>
+                  <linearGradient id="wb-grad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#CB11AB"/>
+                    <stop offset="1" stop-color="#481173"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h3 class="marketplace-name">Wildberries</h3>
+            <div class="marketplace-category">Маркетплейс</div>
+            <div class="marketplace-perk">10,000+ ПВЗ & WB Кошелек</div>
+            <a href="https://wildberries.kz" target="_blank" rel="noopener noreferrer" class="marketplace-btn">
+              <span>Перейти на WB</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+
+          <!-- 3. OZON -->
+          <div class="marketplace-card ozon">
+            <div class="marketplace-logo-wrap">
+              <svg width="44" height="44" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="48" fill="#005BFF"/>
+                <text x="50" y="61" font-family="'Syne', sans-serif" font-weight="900" font-size="24" fill="#FFF" text-anchor="middle">OZON</text>
+              </svg>
+            </div>
+            <h3 class="marketplace-name">OZON</h3>
+            <div class="marketplace-category">Онлайн-магазин</div>
+            <div class="marketplace-perk">Экспресс-доставка за 1-2 дня</div>
+            <a href="https://ozon.kz" target="_blank" rel="noopener noreferrer" class="marketplace-btn">
+              <span>Перейти на Ozon</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+
+          <!-- 4. Halyk -->
+          <div class="marketplace-card halyk">
+            <div class="marketplace-logo-wrap">
+              <svg width="44" height="44" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="48" fill="#007E3A"/>
+                <path d="M28 32H38V45H62V32H72V68H62V55H38V68H28V32Z" fill="#FFF"/>
+              </svg>
+            </div>
+            <h3 class="marketplace-name">Halyk</h3>
+            <div class="marketplace-category">Halyk Market</div>
+            <div class="marketplace-perk">Рассрочка до 24 мес & Бонусы</div>
+            <a href="https://halykmarket.kz" target="_blank" rel="noopener noreferrer" class="marketplace-btn">
+              <span>Перейти в Halyk</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Trust Features Strip -->
+        <div class="trust-bar">
+          <div class="trust-item">
+            <div class="trust-icon">✓</div>
+            <div class="trust-text">
+              <h5>100% Оригинал</h5>
+              <p>Официальные поставки от производителя</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">🛡️</div>
+            <div class="trust-text">
+              <h5>1 Год Гарантии</h5>
+              <p>Полное сервисное обслуживание</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">⚡</div>
+            <div class="trust-text">
+              <h5>Быстрая доставка</h5>
+              <p>В день заказа по городу и экспресс в регионы</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">💳</div>
+            <div class="trust-text">
+              <h5>Рассрочка 0%</h5>
+              <p>Без переплат и скрытых комиссий</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. ФОТОГАЛЕРЕЯ
+         ====================================================================== -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-tag">Визуальный тур</div>
+          <h2 class="section-title">Почувствуй новую реальность</h2>
+          <p class="section-subtitle">
+            Кадры из виртуальных миров, моменты живых соревнований и премиальный индустриальный дизайн шлема.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="all">Все</button>
+          <button class="filter-btn" data-filter="gaming">Гейминг</button>
+          <button class="filter-btn" data-filter="metaverse">Метавселенная</button>
+          <button class="filter-btn" data-filter="cinema">Кино & Шоу</button>
+          <button class="filter-btn" data-filter="design">3D & Дизайн</button>
+        </div>
+
+        <!-- Masonry / Bento Gallery Grid -->
+        <div class="gallery-grid">
+          <!-- Item 1: Uploaded Reference Hero Model (Featured large) -->
+          <div class="gallery-item span-2-col" data-category="metaverse">
+            <img src="assets/images/hero-model.jpg" alt="Модель в очках REALITY SHIFT VR">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Киберспорт & Будущее</span>
+              <h4 class="gallery-title">Премиальный кибер-стиль</h4>
+              <p class="gallery-desc">Эргономика нового поколения и футуристичный дизайн</p>
+            </div>
+          </div>
+
+          <!-- Item 2: Uploaded Reference Experience Dreamy Scene -->
+          <div class="gallery-item" data-category="gaming">
+            <img src="assets/images/experience-model.jpg" alt="Иммерсивный опыт виртуальной реальности">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Иммерсивный экспириенс</span>
+              <h4 class="gallery-title">EpicXR Worlds</h4>
+              <p class="gallery-desc">Погружение в фантастические пространства</p>
+            </div>
+          </div>
+
+          <!-- Item 3: Space Exploration / Metaverse -->
+          <div class="gallery-item" data-category="metaverse">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80" alt="Космическое путешествие в VR">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Космос & Наука</span>
+              <h4 class="gallery-title">Глубокий космос</h4>
+              <p class="gallery-desc">Исследуй галактики в 360 градусах</p>
+            </div>
+          </div>
+
+          <!-- Item 4: Cyberpunk / Gaming Action -->
+          <div class="gallery-item" data-category="gaming">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80" alt="Киберспортивный турнир в VR">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Соревнования</span>
+              <h4 class="gallery-title">Cyber Battle Arena</h4>
+              <p class="gallery-desc">Сверхнизкая задержка для побед в турнирах</p>
+            </div>
+          </div>
+
+          <!-- Item 5: Cinema / Spatial Media -->
+          <div class="gallery-item" data-category="cinema">
+            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&auto=format&fit=crop&q=80" alt="Кинотеатральный опыт">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Spatial Кино</span>
+              <h4 class="gallery-title">Личный кинотеатр</h4>
+              <p class="gallery-desc">Звук Dolby Atmos и бесконечный экран</p>
+            </div>
+          </div>
+
+          <!-- Item 6: Virtual Workspace / 3D Design -->
+          <div class="gallery-item span-2-col" data-category="design">
+            <img src="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&auto=format&fit=crop&q=80" alt="3D-моделирование и дизайн в виртуальном пространстве">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Продуктивность</span>
+              <h4 class="gallery-title">Смешанная реальность для работы</h4>
+              <p class="gallery-desc">Мультимониторное пространство для креаторов и инженеров</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. КАТАЛОГ ТОВАРОВ
+         ====================================================================== -->
+    <section class="section" id="catalog">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-tag">Флагманский модельный ряд</div>
+          <h2 class="section-title">Выбери свой мир</h2>
+          <p class="section-subtitle">
+            Выберите конфигурацию, идеально подходящую для ваших целей — от домашнего кинотеатра до киберспортивных баталий.
+          </p>
+        </div>
+
+        <!-- Controls: Storage & Demo Notice -->
+        <div class="catalog-controls">
+          <div class="memory-selector">
+            <span style="font-size: 0.82rem; color: var(--text-muted); padding-left: 10px;">Память:</span>
+            <button class="memory-btn active" data-storage="128GB">128 GB</button>
+            <button class="memory-btn" data-storage="256GB">256 GB</button>
+            <button class="memory-btn" data-storage="512GB">512 GB</button>
+          </div>
+          <div class="demo-prices-notice">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            Цены демонстрационные — их можно настроить под реальный прайс-лист в 1 клик
+          </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="catalog-grid">
+          <!-- 1. VR Headset Pro -->
+          <div class="product-card">
+            <span class="product-ribbon standard">Базовая версия</span>
+            <div class="product-type">Основное устройство</div>
+            <h3 class="product-title">VR Headset Pro</h3>
+
+            <div class="product-price-box">
+              <span class="product-price-label">Стоимость:</span>
+              <div class="product-price" id="price-pro">199 990 ₸</div>
+              <div class="product-installment" id="inst-pro">от 16 665 ₸/мес в рассрочку 0-0-12</div>
+            </div>
+
+            <div class="product-features-title">В комплекте:</div>
+            <ul class="product-features-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Флагманский VR-шлем с оптикой Pancake</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>2 контроллера движения с тактильным откликом</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Быстрый кабель питания Type-C и блок зарядки 45W</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Гипоаллергенная силиконовая накладка для лица</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Официальная гарантия 12 месяцев</span>
+              </li>
+            </ul>
+
+            <div class="product-btn-group">
+              <button class="btn-buy-card primary" data-open-order="pro">Купить Pro</button>
+              <button class="btn-buy-card outline" data-open-specs="pro">Подробнее</button>
+            </div>
+          </div>
+
+          <!-- 2. VR Complete Set (Featured) -->
+          <div class="product-card featured">
+            <span class="product-ribbon hot">🔥 Хит продаж</span>
+            <div class="product-type">Полный комплект</div>
+            <h3 class="product-title">VR Complete Set</h3>
+
+            <div class="product-price-box">
+              <span class="product-price-label">Стоимость комплекта:</span>
+              <div class="product-price" id="price-complete">249 990 ₸</div>
+              <div class="product-installment" id="inst-complete">от 20 832 ₸/мес в рассрочку 0-0-12</div>
+            </div>
+
+            <div class="product-features-title">Включает всё из Pro + Эксклюзивно:</div>
+            <ul class="product-features-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Всё из комплектации Pro</strong> (шлем + контроллеры)</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Беспроводная магнитная док-станция</strong> Charging Dock</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Премиальный защитный кейс</strong> Armor Travel Case</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Оптический кабель VR-Link 5м для стриминга с ПК</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Набор сменных дышащих кожаных накладок</span>
+              </li>
+            </ul>
+
+            <div class="product-btn-group">
+              <button class="btn-buy-card gradient" data-open-order="complete">Заказать комплект</button>
+              <button class="btn-buy-card outline" data-open-specs="complete">Подробнее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. ПРЕИМУЩЕСТВА УСТРОЙСТВА
+         ====================================================================== -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-tag">Инженерное совершенство</div>
+          <h2 class="section-title">Технологии для новых возможностей</h2>
+          <p class="section-subtitle">
+            Мы переосмыслили виртуальную реальность, объединив передовые аппаратные решения и бескомпромиссный комфорт.
+          </p>
+        </div>
+
+        <div class="advantages-bento">
+          <!-- 1. Беспроводное подключение -->
+          <div class="bento-card">
+            <div class="bento-header">
+              <div class="bento-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                  <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                  <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                </svg>
+              </div>
+              <span class="bento-number">01</span>
+            </div>
+            <h3 class="bento-title">Беспроводное подключение</h3>
+            <p class="bento-desc">
+              Свобода движений без лишних проводов и ограничений. Никаких кабелей, сковывающих ваши движения — перемещайтесь по комнате свободно на 360 градусов.
+            </p>
+            <div class="bento-specs-chips">
+              <span class="spec-chip">Wi-Fi 6E / 7</span>
+              <span class="spec-chip">Радиус до 15м</span>
+              <span class="spec-chip">PC VR стриминг</span>
+              <span class="spec-chip">Задержка &lt;12 мс</span>
+            </div>
+          </div>
+
+          <!-- 2. Высокое разрешение -->
+          <div class="bento-card">
+            <div class="bento-header">
+              <div class="bento-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+              </div>
+              <span class="bento-number">02</span>
+            </div>
+            <h3 class="bento-title">Высокое разрешение</h3>
+            <p class="bento-desc">
+              Детализированное изображение и эффект полного погружения. Никакой пиксельной сетки (Screen Door Effect) благодаря микролинзам Pancake и плотности 1200+ PPI.
+            </p>
+            <div class="bento-specs-chips">
+              <span class="spec-chip">Dual 4K+ Micro-OLED</span>
+              <span class="spec-chip">120 Hz частота</span>
+              <span class="spec-chip">110° угол обзора</span>
+              <span class="spec-chip">HDR10+</span>
+            </div>
+          </div>
+
+          <!-- 3. Мощный процессор -->
+          <div class="bento-card">
+            <div class="bento-header">
+              <div class="bento-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </div>
+              <span class="bento-number">03</span>
+            </div>
+            <h3 class="bento-title">Мощный процессор</h3>
+            <p class="bento-desc">
+              Быстрая работа системы и плавное взаимодействие с виртуальным миром. Встроенный NPU-блок просчитывает трекинг глаз, рук и окружающего пространства в реальном времени.
+            </p>
+            <div class="bento-specs-chips">
+              <span class="spec-chip">8-ядерный XR чипсет</span>
+              <span class="spec-chip">AI Neural Engine</span>
+              <span class="spec-chip">+150% GPU мощность</span>
+              <span class="spec-chip">Активное охлаждение</span>
+            </div>
+          </div>
+
+          <!-- 4. Продуманная эргономика -->
+          <div class="bento-card">
+            <div class="bento-header">
+              <div class="bento-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </div>
+              <span class="bento-number">04</span>
+            </div>
+            <h3 class="bento-title">Продуманная эргономика</h3>
+            <p class="bento-desc">
+              Комфортная посадка для длительного использования. Развесовка 50/50 снимает нагрузку с переносицы и шеи, позволяя играть или работать часами без малейшей усталости.
+            </p>
+            <div class="bento-specs-chips">
+              <span class="spec-chip">Баланс веса 50/50</span>
+              <span class="spec-chip">IPD 58–72 мм</span>
+              <span class="spec-chip">Дышащая ткань</span>
+              <span class="spec-chip">Совместимость с очками</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. ФИНАЛЬНЫЙ ПРОДАЮЩИЙ БЛОК
+         ====================================================================== -->
+    <section class="final-cta-section" id="cta">
+      <div class="container">
+        <div class="final-cta-card">
+          <div class="final-cta-content">
+            <span class="final-source-ref">
+              Партнерский материал и тест-драйв: <a href="https://www.silanano.com/test-2?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">silanano.com</a>
+            </span>
+
+            <h2 class="final-title">
+              Твоя новая реальность<br>
+              <span style="color: var(--accent-cyan);">начинается здесь.</span>
+            </h2>
+
+            <p class="final-subtitle">
+              Сделай первый шаг навстречу технологиям будущего. Выбирай свои VR-очки и открывай новые возможности для игр, работы и незабываемых впечатлений.
+            </p>
+
+            <div class="final-cta-btn-wrapper">
+              <button class="btn-primary final-big-btn" data-open-order="complete">
+                <span>ЗАКАЗАТЬ СЕЙЧАС</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </button>
+            </div>
+
+            <div class="final-perks">
+              <div class="final-perk-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Экспресс-доставка день в день</span>
+              </div>
+              <div class="final-perk-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Рассрочка без процентов до 24 мес</span>
+              </div>
+              <div class="final-perk-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Тест-драйв перед покупкой</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Col -->
+        <div class="footer-brand">
+          <a href="#" class="brand-logo">
+            <div class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path></svg>
+            </div>
+            <span>REALITY<span style="color: var(--accent-cyan);">SHIFT</span></span>
+          </a>
+          <p>
+            Премиальные технологии виртуальной и смешанной реальности. Официальный дистрибьютор флагманских VR-гаджетов.
+          </p>
+          <div class="footer-socials">
+            <a href="https://t.me" target="_blank" class="social-btn" aria-label="Telegram" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="social-btn" aria-label="YouTube" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+            <a href="https://wa.me" target="_blank" class="social-btn" aria-label="WhatsApp" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation Col -->
+        <div>
+          <h4 class="footer-heading">Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Главный экран</a></li>
+            <li><a href="#devices">Устройства и шлем</a></li>
+            <li><a href="#billboard">Иммерсивный опыт</a></li>
+            <li><a href="#gallery">Фотогалерея</a></li>
+            <li><a href="#catalog">Каталог товаров</a></li>
+            <li><a href="#features">Технические преимущества</a></li>
+          </ul>
+        </div>
+
+        <!-- Where to Buy Col -->
+        <div>
+          <h4 class="footer-heading">Маркетплейсы</h4>
+          <ul class="footer-links">
+            <li><a href="https://kaspi.kz" target="_blank" rel="noopener">Kaspi Магазин</a></li>
+            <li><a href="https://wildberries.kz" target="_blank" rel="noopener">Wildberries</a></li>
+            <li><a href="https://ozon.kz" target="_blank" rel="noopener">OZON Казахстан</a></li>
+            <li><a href="https://halykmarket.kz" target="_blank" rel="noopener">Halyk Market</a></li>
+            <li><a href="#catalog">Прямой заказ со скидкой</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacts Col -->
+        <div>
+          <h4 class="footer-heading">Поддержка</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+77771234567">+7 (777) 123-45-67</a></li>
+            <li><a href="mailto:support@realityshift.kz">support@realityshift.kz</a></li>
+            <li><span style="color: var(--text-muted); font-size: 0.85rem;">Ежедневно с 09:00 до 21:00</span></li>
+            <li><span style="color: var(--text-muted); font-size: 0.85rem;">Алматы, пр. Достык 180</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 REALITY SHIFT VR. Все права защищены. Цены на сайте являются ориентировочными и могут меняться в зависимости от акций.
+        </div>
+        <button class="back-to-top-btn" id="back-to-top">
+          <span>Наверх</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       MODAL 1: QUICK ORDER & CHECKOUT MODAL
+       ====================================================================== -->
+  <div class="modal-backdrop" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="order-modal-close" aria-label="Закрыть модальное окно">✕</button>
+
+      <h3 class="modal-title" id="modal-title">Оформление заказа</h3>
+      <p class="modal-sub">Заполните контактные данные для бронирования устройства с официальной гарантией.</p>
+
+      <form id="order-checkout-form">
+        <div class="form-group">
+          <label class="form-label" for="order-product-select">Модель устройства</label>
+          <select class="form-select" id="order-product-select">
+            <option value="pro">VR Headset Pro (Основное устройство)</option>
+            <option value="complete" selected>VR Complete Set (Полный комплект + Док + Кейс)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="order-memory-select">Объем встроенной памяти</label>
+          <select class="form-select" id="order-memory-select">
+            <option value="128GB" selected>128 GB (Рекомендуется для большинства)</option>
+            <option value="256GB">256 GB (Оптимально для большой библиотеки)</option>
+            <option value="512GB">512 GB (Максимальный объем без ограничений)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="order-name">Ваше имя</label>
+          <input type="text" class="form-input" id="order-name" placeholder="Например: Асет" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="order-phone">Номер телефона</label>
+          <input type="tel" class="form-input" id="order-phone" placeholder="+7 (7XX) XXX-XX-XX" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="order-city">Город доставки</label>
+          <input type="text" class="form-input" id="order-city" placeholder="Алматы / Астана / Шымкент..." required>
+        </div>
+
+        <!-- Live Price Summary -->
+        <div class="order-summary-box">
+          <span class="order-sum-label">Итого к оплате:</span>
+          <span class="order-sum-price" id="order-summary-price">249 990 ₸</span>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%;">
+          <span>Подтвердить заказ</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       MODAL 2: DETAILED SPECS MODAL
+       ====================================================================== -->
+  <div class="modal-backdrop" id="specs-modal" role="dialog" aria-modal="true" aria-labelledby="specs-modal-title">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="specs-modal-close" aria-label="Закрыть окно">✕</button>
+
+      <h3 class="modal-title" id="specs-modal-title">Технические характеристики</h3>
+      <p class="modal-sub">Подробные аппаратные и оптические спецификации устройства.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.92rem;">
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+          <span style="color: var(--text-secondary);">Оптика и линзы</span>
+          <strong style="color: #fff;">Ultra-Slim Pancake Lenses</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+          <span style="color: var(--text-secondary);">Разрешение экрана</span>
+          <strong style="color: #fff;">4320 × 2160 (Dual Fast-LCD)</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+          <span style="color: var(--text-secondary);">Частота обновления</span>
+          <strong style="color: var(--accent-cyan);">90 Hz / 120 Hz</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+          <span style="color: var(--text-secondary);">Угол обзора (FOV)</span>
+          <strong style="color: #fff;">110° по диагонали</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+          <span style="color: var(--text-secondary);">Процессор</span>
+          <strong style="color: #fff;">Next-Gen Octa-Core XR AI</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+          <span style="color: var(--text-secondary);">Оперативная память</span>
+          <strong style="color: #fff;">8 GB LPDDR5</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+          <span style="color: var(--text-secondary);">Вес шлема</span>
+          <strong style="color: #fff;">480 грамм (с ремешком)</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+          <span style="color: var(--text-secondary);">Трекинг</span>
+          <strong style="color: #fff;">4 внешние камеры + 2 RGB камеры</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding-bottom: 8px;">
+          <span style="color: var(--text-secondary);">Беспроводная связь</span>
+          <strong style="color: #fff;">Wi-Fi 6E (802.11ax), BT 5.3</strong>
+        </div>
+      </div>
+
+      <button class="btn-primary" style="margin-top: 24px; width: 100%;" data-open-order="pro">
+        <span>Заказать эту модель</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       MODAL 3: GALLERY LIGHTBOX MODAL
+       ====================================================================== -->
+  <div class="lightbox-modal" id="gallery-lightbox">
+    <div class="lightbox-container">
+      <button class="modal-close-btn" id="lightbox-close" style="top: -45px; right: 0;">✕</button>
+      <img id="lightbox-image" src="" alt="VR Gallery Lightbox Preview">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       TOAST NOTIFICATION
+       ====================================================================== -->
+  <div class="toast-notice" id="toast-notice">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    <span class="toast-text">Заказ успешно оформлен!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+
