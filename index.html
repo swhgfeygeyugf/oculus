@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="REALITY SHIFT VR — Погрузись в реальность без границ">
   <meta property="og:description" content="Премиальный VR-шлем нового поколения. Покупайте на Kaspi, Wildberries, Ozon и Halyk Market.">
-  <meta property="og:image" content="assets/images/hero-model.jpg">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1622979135225-d2ba269bc1df?w=1200&auto=format&fit=crop&q=80">
 
   <!-- Google Fonts: Syne (Massive Display), Outfit (Clean Modern Body), Space Grotesk (Tech Monospace) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,93 +102,71 @@
 
   <main>
     <!-- ======================================================================
-         1. ПЕРВЫЙ ЭКРАН — HERO
+         1. ПЕРВЫЙ ЭКРАН — HERO (ДИЗАЙН-РЕФЕРЕНС 1: REALITY SHIFT SHOWCASE)
          ====================================================================== -->
     <section class="hero-section" id="hero">
-      <!-- Giant background typographic watermark (as in the reference image) -->
-      <div class="hero-giant-bg-text">REALITY SHIFT</div>
+      <div class="container">
+        <!-- Framed Stage Container matching the aesthetic of Reference 1 -->
+        <div class="hero-stage-frame">
+          <!-- Giant Bold Wordmark Across the Top Half of the Frame -->
+          <div class="hero-giant-wordmark">REALITY SHIFT</div>
 
-      <div class="container hero-grid">
-        <!-- Hero Text & CTA -->
-        <div class="hero-text-content">
-          <div class="hero-badges-wrapper">
-            <span class="hero-pill">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-              Новое поколение VR
-            </span>
-            <span class="hero-pill neon">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="m10 15 5-3-5-3v6Z"></path></svg>
-              Иммерсивный опыт
-            </span>
+          <!-- Central Character Model with Cyber Visor overlapping the Typography -->
+          <div class="hero-stage-centerpiece">
+            <img src="https://images.unsplash.com/photo-1622979135225-d2ba269bc1df?w=1200&auto=format&fit=crop&q=85" 
+                 alt="Кибер-модель в VR очках нового поколения REALITY SHIFT" 
+                 class="hero-model-visual" 
+                 loading="eager">
           </div>
 
-          <h1 class="hero-title">
-            Погрузись в реальность <span class="text-gradient">без границ</span>
-          </h1>
+          <!-- Floating Glass Cards (Left & Right) matching Reference 1 -->
+          <div class="hero-stage-overlay-grid">
+            <!-- Left Frosted Card: Main Pitch & Action -->
+            <div class="hero-ref1-card-left">
+              <div class="hero-trust-tag">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                <span>Trusted by 50K+ Players</span>
+              </div>
 
-          <p class="hero-description">
-            Открой новый мир развлечений, игр и впечатлений с VR-очками нового поколения. Сверхчеткая оптика Pancake, пространственный звук и свобода беспроводных движений.
-          </p>
+              <h1 class="hero-ref1-title">
+                Погрузись в реальность <span>без границ</span>
+              </h1>
 
-          <div class="hero-cta-group">
-            <button class="btn-primary" data-open-order="pro">
-              <span>Купить сейчас</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-            </button>
-            <a href="#billboard" class="btn-secondary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
-              <span>Смотреть трейлер</span>
-            </a>
-          </div>
+              <p class="hero-ref1-desc">
+                Открой новый мир развлечений, игр и впечатлений с VR-очками нового поколения. Сверхчеткая оптика Pancake, пространственный звук и свобода движений 360°.
+              </p>
 
-          <div class="hero-stats-row">
-            <div class="stat-item">
-              <div class="stat-value">4K<span>+</span></div>
-              <div class="stat-label">Ultra-HD на глаз</div>
+              <div class="hero-ref1-badges">
+                <span class="hero-ref1-badge cyan">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  Новое поколение VR
+                </span>
+                <span class="hero-ref1-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="m10 15 5-3-5-3v6Z"></path></svg>
+                  Иммерсивный опыт
+                </span>
+              </div>
+
+              <button class="hero-ref1-btn" data-open-order="pro">
+                <span>Купить сейчас</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </button>
             </div>
-            <div class="stat-item">
-              <div class="stat-value">120<span>Hz</span></div>
-              <div class="stat-label">Плавность частоты</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-value">480<span>г</span></div>
-              <div class="stat-label">Ультралегкий вес</div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Hero Visual Frame with Reference Model & Floating Glass Cards -->
-        <div class="hero-visual-wrapper">
-          <div class="hero-image-frame">
-            <img src="assets/images/hero-model.jpg" alt="Модель в VR очках нового поколения REALITY SHIFT" class="hero-main-img" width="520" height="540">
-          </div>
-
-          <!-- Top-Left Glass Card: Trusted by 50K+ -->
-          <div class="hero-float-card top-left">
-            <div class="float-card-content">
-              <div class="float-avatar-stack">
-                <span>VR</span>
-                <span>XR</span>
-                <span>AI</span>
+            <!-- Right Frosted Preview Card (matching Galaxy Explorer VR card in Ref 1) -->
+            <div class="hero-ref1-card-right">
+              <div class="preview-thumb-box">
+                <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=500&auto=format&fit=crop&q=80" alt="Galaxy Explorer VR">
+                <span class="preview-badge-status">4.9 ★</span>
               </div>
               <div>
-                <div class="float-card-title">50,000+ геймеров</div>
-                <div class="float-card-sub">Доверяют флагману</div>
+                <div class="preview-card-title">Galaxy Explorer VR</div>
+                <div class="preview-card-desc">Флагманский релиз года</div>
               </div>
-            </div>
-          </div>
-
-          <!-- Bottom-Right Glass Card: Product Preview -->
-          <div class="hero-float-card bottom-right">
-            <div class="float-card-content">
-              <div>
-                <div class="float-card-title">Galaxy Explorer VR</div>
-                <div class="float-card-sub">Флагманский релиз года</div>
-                <div class="float-pill-btn">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                  Рейтинг 4.9 / 5.0
-                </div>
-              </div>
+              <button class="preview-card-pill" data-open-order="pro">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                <span>от 199 990 ₸</span>
+              </button>
             </div>
           </div>
         </div>
@@ -212,14 +190,8 @@
           <!-- 1. VR Headset -->
           <div class="device-card">
             <span class="device-badge">Core Unit</span>
-            <div class="device-icon-box">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="7" width="20" height="11" rx="4"></rect>
-                <circle cx="8" cy="12.5" r="2.5"></circle>
-                <circle cx="16" cy="12.5" r="2.5"></circle>
-                <path d="M10.5 12.5h3"></path>
-                <path d="M5 7v-1a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1"></path>
-              </svg>
+            <div class="device-image-preview">
+              <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=600&auto=format&fit=crop&q=80" alt="Шлем виртуальной реальности VR Headset">
             </div>
             <h3 class="device-name">VR Headset</h3>
             <div class="device-desc">Шлем виртуальной реальности</div>
@@ -238,11 +210,8 @@
           <!-- 2. Motion Controllers -->
           <div class="device-card">
             <span class="device-badge">6DoF Precision</span>
-            <div class="device-icon-box">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                <circle cx="12" cy="12" r="3"></circle>
-              </svg>
+            <div class="device-image-preview">
+              <img src="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=600&auto=format&fit=crop&q=80" alt="Контроллеры движения Motion Controllers">
             </div>
             <h3 class="device-name">Motion Controllers</h3>
             <div class="device-desc">Контроллеры движения</div>
@@ -261,10 +230,8 @@
           <!-- 3. Charging Dock -->
           <div class="device-card">
             <span class="device-badge">Fast Magnetic</span>
-            <div class="device-icon-box">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-              </svg>
+            <div class="device-image-preview">
+              <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80" alt="Зарядная станция Charging Dock">
             </div>
             <h3 class="device-name">Charging Dock</h3>
             <div class="device-desc">Зарядная станция</div>
@@ -272,7 +239,7 @@
               <li>Одновременная зарядка шлема и геймпадов</li>
               <li>Быстрое магнитное примагничивание Snap-In</li>
               <li>LED-индикаторы статуса батареи</li>
-              <li>Защита от перегрева и скачков напряжения</li>
+              <li>Защита от перегрева и перепадов сети</li>
             </ul>
             <button class="device-action-btn" data-open-specs="complete">
               <span>Спецификация</span>
@@ -283,12 +250,8 @@
           <!-- 4. Travel Case -->
           <div class="device-card">
             <span class="device-badge">Armor Pro</span>
-            <div class="device-icon-box">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="7" width="20" height="14" rx="3"></rect>
-                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
-                <line x1="12" y1="12" x2="12" y2="12.01"></line>
-              </svg>
+            <div class="device-image-preview">
+              <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&auto=format&fit=crop&q=80" alt="Защитный кейс Travel Case">
             </div>
             <h3 class="device-name">Travel Case</h3>
             <div class="device-desc">Защитный кейс</div>
@@ -308,55 +271,86 @@
     </section>
 
     <!-- ======================================================================
-         3. БОЛЬШОЙ РЕКЛАМНЫЙ СЛОГАН
+         3. БОЛЬШОЙ РЕКЛАМНЫЙ СЛОГАН (ДИЗАЙН-РЕФЕРЕНС 2: EPICXR FROSTED BOARD)
          ====================================================================== -->
     <section class="billboard-section" id="billboard">
-      <div class="billboard-bg-glow"></div>
+      <div class="container">
+        <!-- Frosted Glass Showcase Billboard Inspired by Reference 2 (EpicXR) -->
+        <div class="epicxr-billboard-card">
+          <!-- Atmospheric Background Image -->
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1600&auto=format&fit=crop&q=80" 
+               alt="VR Experience Ethereal Background" 
+               class="epicxr-bg-image">
 
-      <div class="container billboard-content">
-        <div class="billboard-source-badge">
-          <span>Статья об опыте VR нового поколения:</span>
-          <a href="https://yourstory.com/2023/06/augmented-reality-virtual-reality-transforming-digital-experience?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">yourstory.com</a>
-        </div>
+          <div class="epicxr-content-wrap">
+            <!-- Left Side: Typography & Action Buttons -->
+            <div>
+              <div class="epicxr-source-pill">
+                <span>Статья об опыте VR нового поколения:</span>
+                <a href="https://yourstory.com/2023/06/augmented-reality-virtual-reality-transforming-digital-experience?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">yourstory.com</a>
+              </div>
 
-        <h2 class="billboard-quote">
-          НЕ СМОТРИ НА МИР.<br>
-          <span>СТАНЬ ЕГО ЧАСТЬЮ.</span>
-        </h2>
+              <h2 class="epicxr-quote-title">
+                НЕ СМОТРИ НА МИР.<br>
+                <span>СТАНЬ ЕГО ЧАСТЬЮ.</span>
+              </h2>
 
-        <p class="billboard-text">
-          Забудь о границах привычного пространства. Играй, путешествуй, исследуй и создавай собственную реальность.
-        </p>
-
-        <!-- Interactive Experience Switcher -->
-        <div class="experience-tabs-wrapper">
-          <div class="experience-tabs">
-            <button class="exp-tab-btn active" data-mode="gaming">🎮 Гейминг</button>
-            <button class="exp-tab-btn" data-mode="cinema">🎬 IMAX Кино</button>
-            <button class="exp-tab-btn" data-mode="travel">🚀 Путешествия</button>
-            <button class="exp-tab-btn" data-mode="work">💼 Работа & Творчество</button>
-          </div>
-
-          <div class="experience-display-box">
-            <div class="exp-display-visual">
-              <img id="exp-img" src="assets/images/experience-model.jpg" alt="Виртуальный мир REALITY SHIFT VR">
-            </div>
-            <div class="exp-display-text">
-              <h4 id="exp-title">AAA-Гейминг Без Границ</h4>
-              <p id="exp-desc">
-                Полное погружение в виртуальные миры с частотой 120 кадров в секунду, тактильной отдачей и объемным 3D-звучанием. От киберспорта до эпических RPG.
+              <p class="epicxr-quote-text">
+                Забудь о границах привычного пространства. Играй, путешествуй, исследуй и создавай собственную реальность в сверхвысоком разрешении с пространственным звуком 360°.
               </p>
-              <div class="exp-stats-mini">
-                <div class="exp-stat-mini">
-                  <strong id="exp-stat1">120 FPS</strong>
-                  <span id="exp-label1">Частота обновления</span>
+
+              <div class="epicxr-btn-group">
+                <button class="btn-pill-dark" data-open-order="complete">
+                  <span>Выбрать комплект</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+                <a href="#gallery" class="btn-pill-white">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <span>Смотреть трейлер</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Side: Dual Frosted Cards (Basic & Standard) matching Reference 2 -->
+            <div class="epicxr-glass-cards-row">
+              <!-- Basic Tier Card -->
+              <div class="epicxr-tier-card">
+                <div>
+                  <h4 class="epicxr-tier-name">Basic Pro</h4>
+                  <ul class="epicxr-tier-bullets">
+                    <li>Дисплеи Dual 4K+ на глаз</li>
+                    <li>Поддержка ПК, консолей и Mac</li>
+                    <li>Частота обновления 120 Hz</li>
+                  </ul>
                 </div>
-                <div class="exp-stat-mini">
-                  <strong id="exp-stat2">&lt;12 мс</strong>
-                  <span id="exp-label2">Задержка отклика</span>
+                <div>
+                  <div class="epicxr-tier-price">от 199 990 ₸</div>
+                  <div class="epicxr-tier-sub">или 16 665 ₸/мес в рассрочку</div>
+                </div>
+              </div>
+
+              <!-- Standard Tier Card -->
+              <div class="epicxr-tier-card">
+                <div>
+                  <h4 class="epicxr-tier-name">Standard Set</h4>
+                  <ul class="epicxr-tier-bullets">
+                    <li>Максимальное 8K HDR качество</li>
+                    <li>Док-станция + Защитный кейс</li>
+                    <li>Кабель VR-Link 5м в комплекте</li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="epicxr-tier-price">от 249 990 ₸</div>
+                  <div class="epicxr-tier-sub">или 20 832 ₸/мес в рассрочку</div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <!-- Bottom Status Bar matching Reference 2 ("Day 05") -->
+          <div class="epicxr-bottom-bar">
+            <span>GEN-3 IMMERSION SERIES</span>
+            <span>NEXT-GENERATION XR HARDWARE</span>
           </div>
         </div>
       </div>
@@ -494,7 +488,7 @@
           <div class="section-tag">Визуальный тур</div>
           <h2 class="section-title">Почувствуй новую реальность</h2>
           <p class="section-subtitle">
-            Кадры из виртуальных миров, моменты живых соревнований и премиальный индустриальный дизайн шлема.
+            Кадры из виртуальных миров, моменты соревнований и премиальный индустриальный дизайн шлема.
           </p>
         </div>
 
@@ -507,11 +501,11 @@
           <button class="filter-btn" data-filter="design">3D & Дизайн</button>
         </div>
 
-        <!-- Masonry / Bento Gallery Grid -->
+        <!-- Masonry / Bento Gallery Grid with High-Res Photography -->
         <div class="gallery-grid">
-          <!-- Item 1: Uploaded Reference Hero Model (Featured large) -->
+          <!-- Item 1: High-Res Neon Cyber VR User -->
           <div class="gallery-item span-2-col" data-category="metaverse">
-            <img src="assets/images/hero-model.jpg" alt="Модель в очках REALITY SHIFT VR">
+            <img src="https://images.unsplash.com/photo-1622979135225-d2ba269bc1df?w=1200&auto=format&fit=crop&q=80" alt="Игрок в очках REALITY SHIFT VR">
             <div class="gallery-overlay">
               <span class="gallery-tag">Киберспорт & Будущее</span>
               <h4 class="gallery-title">Премиальный кибер-стиль</h4>
@@ -519,9 +513,9 @@
             </div>
           </div>
 
-          <!-- Item 2: Uploaded Reference Experience Dreamy Scene -->
+          <!-- Item 2: Woman in Neon Visor -->
           <div class="gallery-item" data-category="gaming">
-            <img src="assets/images/experience-model.jpg" alt="Иммерсивный опыт виртуальной реальности">
+            <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=800&auto=format&fit=crop&q=80" alt="Иммерсивный опыт виртуальной реальности">
             <div class="gallery-overlay">
               <span class="gallery-tag">Иммерсивный экспириенс</span>
               <h4 class="gallery-title">EpicXR Worlds</h4>
@@ -529,7 +523,7 @@
             </div>
           </div>
 
-          <!-- Item 3: Space Exploration / Metaverse -->
+          <!-- Item 3: Deep Space Exploration -->
           <div class="gallery-item" data-category="metaverse">
             <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80" alt="Космическое путешествие в VR">
             <div class="gallery-overlay">
@@ -539,7 +533,7 @@
             </div>
           </div>
 
-          <!-- Item 4: Cyberpunk / Gaming Action -->
+          <!-- Item 4: Esports Battle -->
           <div class="gallery-item" data-category="gaming">
             <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80" alt="Киберспортивный турнир в VR">
             <div class="gallery-overlay">
@@ -549,7 +543,7 @@
             </div>
           </div>
 
-          <!-- Item 5: Cinema / Spatial Media -->
+          <!-- Item 5: Cinema & Spatial Media -->
           <div class="gallery-item" data-category="cinema">
             <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&auto=format&fit=crop&q=80" alt="Кинотеатральный опыт">
             <div class="gallery-overlay">
@@ -559,7 +553,7 @@
             </div>
           </div>
 
-          <!-- Item 6: Virtual Workspace / 3D Design -->
+          <!-- Item 6: Virtual Workspace & 3D Engineering -->
           <div class="gallery-item span-2-col" data-category="design">
             <img src="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&auto=format&fit=crop&q=80" alt="3D-моделирование и дизайн в виртуальном пространстве">
             <div class="gallery-overlay">
@@ -604,6 +598,9 @@
           <!-- 1. VR Headset Pro -->
           <div class="product-card">
             <span class="product-ribbon standard">Базовая версия</span>
+            <div class="product-preview-thumb">
+              <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&auto=format&fit=crop&q=80" alt="VR Headset Pro">
+            </div>
             <div class="product-type">Основное устройство</div>
             <h3 class="product-title">VR Headset Pro</h3>
 
@@ -646,6 +643,9 @@
           <!-- 2. VR Complete Set (Featured) -->
           <div class="product-card featured">
             <span class="product-ribbon hot">🔥 Хит продаж</span>
+            <div class="product-preview-thumb">
+              <img src="https://images.unsplash.com/photo-1622979135225-d2ba269bc1df?w=800&auto=format&fit=crop&q=80" alt="VR Complete Set">
+            </div>
             <div class="product-type">Полный комплект</div>
             <h3 class="product-title">VR Complete Set</h3>
 
@@ -1071,4 +1071,3 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-
